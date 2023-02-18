@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Examen 3Parcial</title>
+  </head>
+  <body>
+    <h1>Obtener area de una figura</h1>
+  </body>
+
+  <script>
+    var option;
+
+    do {
+      option = Number(
+        prompt(
+          "1.-Area de un cuadrado\n2.-Area de un circulo\n3.-Area de un triangulo\n4.-Salir"
+        )
+      );
+
+      switch (option) {
+        case 1:
+          getAreaSquare();
+          break;
+
+        case 2:
+          getAreaCircle();
+          break;
+
+        case 3:
+          getAreaTriangle();
+          break;
+      }
+    } while (option != 4);
+
+    function getAreaSquare() {
+      let lado = Number(prompt("Lado del cuadrado: "));
+      alert("El area del cuadrado es: " + lado * lado + "cm2");
+    }
+
+    function getAreaCircle() {
+      let radio = Number(prompt("Radio del circulo: "));
+      alert("El area del circulo es: " + 3.1416 * Math.pow(radio, 2) + " cm2");
+    }
+
+    function getAreaTriangle() {
+      let base = Number(prompt("Base del triangulo: "));
+      let altura = Number(prompt("Altura del triangulo: "));
+      alert("El area del circulo es: " + (base * altura) / 2 + " cm2");
+    }
+  </script>
+</html>
